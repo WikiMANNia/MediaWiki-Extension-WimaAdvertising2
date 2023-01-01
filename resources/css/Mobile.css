@@ -1,0 +1,80 @@
+/* CSS placed here will affect users of the mobile site */
+
+.wima_ad {
+background-color: #ffffff;
+border: #68a solid 2px;
+display: block;
+position: fixed;
+}
+.wima_label {
+background-color: #ffffff;
+border: #68a solid 1px;
+display: none;
+position: fixed;
+}
+.wima_label_1 {
+top: 0;
+left: 50%;
+heigth:auto;
+width:auto;
+padding:0 5px 0;
+z-index: 100011;
+}
+.wima_ad_1 {
+top: 0;
+right: 0;
+text-align:center;
+heigth:400px;
+width:75%;
+z-index: 100001;
+}
+.wima_label_2 {
+top: 250px;
+left: -30px;
+transform: rotate(-90deg);
+heigth:auto;
+width:auto;
+padding:0 5px 0;
+z-index: 100002;
+}
+.wima_ad_2 {
+top: 250px;
+left:   0;
+text-align:center;
+heigth:100%;
+width:150px;
+z-index: 100012;
+}
+.wima_label_3 {
+top: 250px;
+right: -30px;
+transform: rotate(90deg);
+heigth:auto;
+width:auto;
+padding:0 5px 0;
+z-index: 100003;
+}
+.wima_ad_3 {
+top: 250px;
+right:  0;
+text-align:center;
+heigth:100%;
+width:150px;
+z-index: 100013;
+}
+.wima_label_4 {
+bottom: 0;
+left: 50%;
+heigth:auto;
+width:auto;
+padding:0 5px 0;
+z-index: 100004;
+}
+.wima_ad_4 {
+bottom: 0;
+right: 0;
+text-align:center;
+heigth:20px;
+width:75%;
+z-index: 100014;
+}

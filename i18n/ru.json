@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiMANNia"
+		]
+	},
+	"wimaadvertising-msg": "Реклама Wima",
+	"wimaadvertising-desc": "Предоставляет четыре возможных места для объявлений для (почти) всех скинов, которые заполняются файлом LocalSettings.php.",
+	"wimaadvertising-advertising": "Реклама",
+	"wimaadvertising-eventnote": "Событие",
+	"wimaadvertising-hint": "Записка"
+}

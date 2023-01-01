@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiMANNia"
+		]
+	},
+	"wimaadvertising-msg": "Wima publicidad",
+	"wimaadvertising-desc": "Proporciona cuatro posibles espacios publicitarios para (casi) todos los skins que se rellenan desde LocalSettings.php.",
+	"wimaadvertising-advertising": "Publicidad",
+	"wimaadvertising-eventnote": "Evento",
+	"wimaadvertising-hint": "Nota"
+}
