@@ -1,28 +1,25 @@
 /* CSS for Vector */
 
-#p-wimaadvertising-advertising .body,
-#p-wimaadvertising-advertising2 .body,
-#p-wimaadvertising-eventnote .body,
-#p-wimaadvertising-eventnote2 .body,
-#p-wimaadvertising-hint .body,
-#p-wimaadvertising-hint2 .body {
-	background-color: #fff;
-	background-image: none !important;
-	font-size: 0.8em;
-	margin-left: -.7em;
-	margin-top: .3em;
-	padding: 0 0 .1em 0;
-	width: auto;
+.wima_ad {
+background-color: #ffffff;
+border: lightgrey solid 1px;
 }
-#p-wimaadvertising-advertising p,
-#p-wimaadvertising-advertising2 p,
-#p-wimaadvertising-eventnote p,
-#p-wimaadvertising-eventnote2 p,
-#p-wimaadvertising-hint p,
-#p-wimaadvertising-hint2 p {
-	color: #333;
-	font-size: 0.6em;
-	line-height: 1.1em;
-	padding: 0 0.2em 0 0.5em;
-	word-wrap: break-word;
+.wima_label {
+background-color: #ffffff;
+border: lightgrey solid 2px;
+}
+.wima_ad_1 {
+top: 50px;
+}
+.wima_ad_2 {
+width:173px;
+}
+.wima_ad_3 {
+width:173px;
+}
+.wima_label_2 {
+left: -30px;
+}
+.wima_label_3 {
+right: -30px;
 }

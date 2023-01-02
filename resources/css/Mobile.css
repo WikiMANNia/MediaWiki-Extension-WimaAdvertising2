@@ -3,14 +3,38 @@
 .wima_ad {
 background-color: #ffffff;
 border: #68a solid 2px;
-display: block;
-position: fixed;
 }
 .wima_label {
 background-color: #ffffff;
 border: #68a solid 1px;
-display: none;
-position: fixed;
+}
+.wima_ad_2 {
+width:140px;
+}
+.wima_ad_3 {
+width:140px;
+}
+
+.wima_ad {
+display:block;
+position:fixed;
+z-index: 10000;
+}
+.wima_label {
+cursor:pointer;
+display:none;
+position:fixed;
+z-index: 100001;
+}
+.wima_ad_label {
+cursor:pointer;
+float:right;
+font-size:.8em;
+padding-bottom:4px;
+padding-right:10px;
+top:2px
+width:auto;
+z-index: 100002;
 }
 .wima_label_1 {
 top: 0;
@@ -18,36 +42,32 @@ left: 50%;
 heigth:auto;
 width:auto;
 padding:0 5px 0;
-z-index: 100011;
 }
 .wima_ad_1 {
 top: 0;
 right: 0;
-text-align:center;
 heigth:400px;
-width:75%;
-z-index: 100001;
+width:80%;
+text-align:center;
 }
 .wima_label_2 {
 top: 250px;
-left: -30px;
+left: -60px;
 transform: rotate(-90deg);
 heigth:auto;
 width:auto;
 padding:0 5px 0;
-z-index: 100002;
 }
 .wima_ad_2 {
 top: 250px;
 left:   0;
 text-align:center;
 heigth:100%;
-width:150px;
 z-index: 100012;
 }
 .wima_label_3 {
 top: 250px;
-right: -30px;
+right: -60px;
 transform: rotate(90deg);
 heigth:auto;
 width:auto;
@@ -59,7 +79,6 @@ top: 250px;
 right:  0;
 text-align:center;
 heigth:100%;
-width:150px;
 z-index: 100013;
 }
 .wima_label_4 {
@@ -68,13 +87,10 @@ left: 50%;
 heigth:auto;
 width:auto;
 padding:0 5px 0;
-z-index: 100004;
 }
 .wima_ad_4 {
 bottom: 0;
 right: 0;
+width:80%;
 text-align:center;
-heigth:20px;
-width:75%;
-z-index: 100014;
 }
