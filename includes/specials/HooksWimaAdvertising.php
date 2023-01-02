@@ -64,10 +64,12 @@ class WimaAdvertisingHooks extends Hooks {
 	private static function getAdBox( $nr, $html, $ad_label, $ad_label_show, $ad_label_hide ) {
 		$showtoc_label = $ad_label . ' ' . $ad_label_show;
 		$hidetoc_label = $ad_label . ' [' . $ad_label_hide . ']';
+		$class_and_id_ad    = 'wima_ad_' . $nr;
+		$class_and_id_label = 'wima_label_' . $nr;
 
-		return '<div id="wima_label_' . $nr . '" class="wima_label wima_label_' . $nr . '" onclick="javascript:wimaOnOff(' . $nr . ')">' . $showtoc_label . '</div>
-	<div id="wima_ad_' . $nr . '" class="wima_ad wima_ad_' . $nr . '"><div class="wima_ad_label" onclick="javascript:wimaOnOff(' . $nr . ')">' . $hidetoc_label . '</div>
-	<br />' . $html . '</div>';
+		return '<div id="' . $class_and_id_label . '" class="wima_label ' . $class_and_id_label . '" onclick="javascript:wimaOnOff(' . $nr . ')">' . $showtoc_label . '</div>
+	<div id="' . $class_and_id_ad . '" class="wima_ad ' . $class_and_id_ad . '"><div class="wima_ad_label" onclick="javascript:wimaOnOff(' . $nr . ')">' . $hidetoc_label . '</div>' .
+	$html . '</div>';
 	}
 
 	private static function isActive( $user ) {
