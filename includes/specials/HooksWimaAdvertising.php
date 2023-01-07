@@ -15,14 +15,10 @@ class WimaAdvertisingHooks extends Hooks {
 		if ( !self::isActive( $user ) )  return;
 
 		$skinname = $skin->getSkinName();
-		$out->addModules( 'ext.wimaadvertising.common' );
+		$out->addModuleStyles( 'ext.wimaadvertising.common' );
 		$out->addModuleStyles( 'ext.wimaadvertising.mobile' );
 		if ( CustomAdvertisingSettings::isSupportedSkin( $skinname ) ) {
-			if ( $skinname === 'vector-2022' ) {
-				$out->addModuleStyles( 'ext.wimaadvertising.vector' );
-			} else {
-				$out->addModuleStyles( 'ext.wimaadvertising.' . $skinname );
-			}
+			$out->addModuleStyles( 'ext.wimaadvertising.' . $skinname );
 		} else if ( $skinname !== 'fallback' ) {
 			wfLogWarning( 'Skin ' . $skinname . ' not supported by WimaAdvertising.' . "\n" );
 		}
@@ -44,20 +40,28 @@ class WimaAdvertisingHooks extends Hooks {
 		$AD_4 = self::getAdCode( $user, 'bottom' );
 
 		if ( !empty( $AD_1 ) ) {
-			$ad_label = $skin->msg( 'wimaadvertising-' . self::getAdType( $user, 'top' ) )->text();
-			$out->addHTML( self::getAdBox( 1, $AD_1, $ad_label, $ad_label_show, $ad_label_hide ) );
+			$msg_key  = 'wimaadvertising-' . self::getAdType( $user, 'top' );
+			$ad_label = $skin->msg( $msg_key )->text();
+			$ad_box = self::getAdBox( 1, $AD_1, $ad_label, $ad_label_show, $ad_label_hide );
+			$out->addHTML( $ad_box );
 		}
 		if ( !empty( $AD_2 ) ) {
-			$ad_label = $skin->msg( 'wimaadvertising-' . self::getAdType( $user, 'left' ) )->text();
-			$out->addHTML( self::getAdBox( 2, $AD_2, $ad_label, $ad_label_show, $ad_label_hide ) );
+			$msg_key  = 'wimaadvertising-' . self::getAdType( $user, 'left' );
+			$ad_label = $skin->msg( $msg_key )->text();
+			$ad_box = self::getAdBox( 2, $AD_2, $ad_label, $ad_label_show, $ad_label_hide );
+			$out->addHTML( $ad_box );
 		}
 		if ( !empty( $AD_3 ) ) {
-			$ad_label = $skin->msg( 'wimaadvertising-' . self::getAdType( $user, 'right' ) )->text();
-			$out->addHTML( self::getAdBox( 3, $AD_3, $ad_label, $ad_label_show, $ad_label_hide ) );
+			$msg_key  = 'wimaadvertising-' . self::getAdType( $user, 'right' );
+			$ad_label = $skin->msg( $msg_key )->text();
+			$ad_box = self::getAdBox( 3, $AD_3, $ad_label, $ad_label_show, $ad_label_hide );
+			$out->addHTML( $ad_box );
 		}
 		if ( !empty( $AD_4 ) ) {
-			$ad_label = $skin->msg( 'wimaadvertising-' . self::getAdType( $user, 'bottom' ) )->text();
-			$out->addHTML( self::getAdBox( 4, $AD_4, $ad_label, $ad_label_show, $ad_label_hide ) );
+			$msg_key  = 'wimaadvertising-' . self::getAdType( $user, 'bottom' );
+			$ad_label = $skin->msg( $msg_key )->text();
+			$ad_box = self::getAdBox( 4, $AD_4, $ad_label, $ad_label_show, $ad_label_hide );
+			$out->addHTML( $ad_box );
 		}
 	}
 

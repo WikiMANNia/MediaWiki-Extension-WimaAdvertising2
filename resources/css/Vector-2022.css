@@ -1,4 +1,4 @@
-/* CSS for Vector */
+/* CSS for Vector-2022 */
 
 .wima_ad {
 background-color: #ffffff;
@@ -8,9 +8,21 @@ border: lightgrey solid 1px;
 background-color: #ffffff;
 border: lightgrey solid 2px;
 }
+.wima_label_1 {
+top: 50px;
+}
+.wima_ad_1 {
+top: 50px;
+}
 .wima_ad_2 {
 width:173px;
 }
 .wima_ad_3 {
 width:173px;
+}
+.wima_label_2 {
+left: -30px;
+}
+.wima_label_3 {
+right: -30px;
 }

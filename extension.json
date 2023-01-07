@@ -44,7 +44,10 @@
 			"styles": "css/Cologneblue.css"
 		},
 		"ext.wimaadvertising.mobile": {
-			"styles": "css/Mobile.css"
+			"styles": "css/Mobile.css",
+			"targets": [
+				"mobile"
+			]
 		},
 		"ext.wimaadvertising.minerva": {
 			"styles": "css/Minerva.css"
@@ -60,6 +63,9 @@
 		},
 		"ext.wimaadvertising.vector": {
 			"styles": "css/Vector.css"
+		},
+		"ext.wimaadvertising.vector-2022": {
+			"styles": "css/Vector-2022.css"
 		}
 	},
 	"ResourceFileModulePaths": {
