@@ -74,6 +74,7 @@ Define up to four ad units:
 * `$wgWimaGoogleAdSense_Left   = [ 'slotid 2', 145, 260 ];`
 * `$wgWimaGoogleAdSense_Right  = [ 'slotid 3', 145, 260 ];`
 * `$wgWimaGoogleAdSense_Bottom = [ 'slotid 4', 145, 260 ];`
+
 Replace the first value with your AdSense ad unit ID (google_ad_slot / data-ad-slot) for each ad unit. The Slot ID for your AdSense script is for example `1234580893`.
 
 Also specify the width and the height of the AdSense unit, specified in your AdSense account (google_ad_width / data-ad-width, google_ad_height / data-ad-height).
