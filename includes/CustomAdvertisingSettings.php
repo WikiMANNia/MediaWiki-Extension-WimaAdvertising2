@@ -28,32 +28,32 @@ class CustomAdvertisingSettings {
 		 */
 
 		// 1. Steuerung
-		global $wgWimaAdvertising;
-		global $wgWimaAdvertisingAnonOnly;
+		global $wmWimaAdvertising;
+		global $wmWimaAdvertisingAnonOnly;
 
-		$this->mActive   = empty( $wgWimaAdvertising         ) ? false : ( ( $wgWimaAdvertising         === true ) || ( $wgWimaAdvertising         === 'true' ) );
-		$this->mAnonOnly = empty( $wgWimaAdvertisingAnonOnly ) ? false : ( ( $wgWimaAdvertisingAnonOnly === true ) || ( $wgWimaAdvertisingAnonOnly === 'true' ) );
+		$this->mActive   = empty( $wmWimaAdvertising         ) ? false : ( ( $wmWimaAdvertising         === true ) || ( $wmWimaAdvertising         === 'true' ) );
+		$this->mAnonOnly = empty( $wmWimaAdvertisingAnonOnly ) ? false : ( ( $wmWimaAdvertisingAnonOnly === true ) || ( $wmWimaAdvertisingAnonOnly === 'true' ) );
 
 
 		// 2. Spezifische Variablen für jeden Werbeblock
-		global $wgAdBottomType, $wgAdTopType;
-		global $wgAdLeftType,   $wgAdRightType;
+		global $wmAdBottomType, $wmAdTopType;
+		global $wmAdLeftType,   $wmAdRightType;
 
 		$this->mDefaultType = 'advertising';
-		$this->mTypeArray['bottom'] = self::isSupportedType( $wgAdBottomType ) ? $wgAdBottomType : $this->mDefaultType;
-		$this->mTypeArray['top']    = self::isSupportedType( $wgAdTopType    ) ? $wgAdTopType    : $this->mDefaultType;
-		$this->mTypeArray['left']   = self::isSupportedType( $wgAdLeftType   ) ? $wgAdLeftType   : $this->mDefaultType;
-		$this->mTypeArray['right']  = self::isSupportedType( $wgAdRightType  ) ? $wgAdRightType  : $this->mDefaultType;
+		$this->mTypeArray['bottom'] = self::isSupportedType( $wmAdBottomType ) ? $wmAdBottomType : $this->mDefaultType;
+		$this->mTypeArray['top']    = self::isSupportedType( $wmAdTopType    ) ? $wmAdTopType    : $this->mDefaultType;
+		$this->mTypeArray['left']   = self::isSupportedType( $wmAdLeftType   ) ? $wmAdLeftType   : $this->mDefaultType;
+		$this->mTypeArray['right']  = self::isSupportedType( $wmAdRightType  ) ? $wmAdRightType  : $this->mDefaultType;
 
 
 		// HTML-Snippet für jeden Werbeblock, falls jedoch ungültige Parameter auf false setzen
-		global $wgAdLeftCode,  $wgAdBottomCode;
-		global $wgAdRightCode, $wgAdTopCode;
+		global $wmAdLeftCode,  $wmAdBottomCode;
+		global $wmAdRightCode, $wmAdTopCode;
 
-		$this->mCodeArray['bottom'] = empty( $wgAdBottomCode ) ? false : $wgAdBottomCode;
-		$this->mCodeArray['top']    = empty( $wgAdTopCode    ) ? false : $wgAdTopCode;
-		$this->mCodeArray['left']   = empty( $wgAdLeftCode   ) ? false : $wgAdLeftCode;
-		$this->mCodeArray['right']  = empty( $wgAdRightCode  ) ? false : $wgAdRightCode;
+		$this->mCodeArray['bottom'] = empty( $wmAdBottomCode ) ? false : $wmAdBottomCode;
+		$this->mCodeArray['top']    = empty( $wmAdTopCode    ) ? false : $wmAdTopCode;
+		$this->mCodeArray['left']   = empty( $wmAdLeftCode   ) ? false : $wmAdLeftCode;
+		$this->mCodeArray['right']  = empty( $wmAdRightCode  ) ? false : $wmAdRightCode;
 	}
 
 	private function __clone() { }

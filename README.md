@@ -23,32 +23,32 @@ The advertising space 1 alternates randomly with Sitenotice. Advertising space 2
 ## Custom Advertising
 
 Enable advertising. Default is `false`.
-* `$wgWimaAdvertising = true;`
+* `$wmWimaAdvertising = true;`
 
 Disable advertising for logged-in users. Default is `false`.
-* `$wgWimaAdvertisingAnonOnly = true;`
+* `$wmWimaAdvertisingAnonOnly = true;`
 
 Two advertising spaces can also be used as event information. These variables have to be set:
 
-* `$wgAdTopType    = 'advertising';`
-* `$wgAdLeftType   = 'eventnote';`
-* `$wgAdRightType  = 'hint';`
-* `$wgAdBottomType = 'advertising';`
+* `$wmAdTopType    = 'advertising';`
+* `$wmAdLeftType   = 'eventnote';`
+* `$wmAdRightType  = 'hint';`
+* `$wmAdBottomType = 'advertising';`
 
 The default value is `advertising`. These variables can therefore be omitted for advertising insertions.
 
 HTML code must be assigned to these variables:
 
-* `$wgAdTopCode    = '';`
-* `$wgAdLeftCode   = '';`
-* `$wgAdRightCode  = '';`
-* `$wgAdBottomCode = '';`
+* `$wmAdTopCode    = '';`
+* `$wmAdLeftCode   = '';`
+* `$wmAdRightCode  = '';`
+* `$wmAdBottomCode = '';`
 
 If a variable is not set or contains its string of zero length, the corresponding ad space remains unoccupied.
 
 This variable is for some js support:
 
-* `$wgWimaAdvertisingScript = '';`
+* `$wmWimaAdvertisingScript = '';`
 
 Enable advertising. Default is `false`.
 
@@ -56,7 +56,7 @@ Enable advertising. Default is `false`.
 
 Disable advertising for logged-in users. Default is `false`.
 
-* `$wgWimaAdvertisingAnonOnly = true;`
+* `$wmWimaAdvertisingAnonOnly = true;`
 
 The extension is localized for the languages "de", "en", "es", "fr", "it", "nl", "pt", and "ru".
 
@@ -66,22 +66,22 @@ Further skins may require additional adjustments, which would have to be made in
 ## Google AdSense
 
 Enable advertising. Default is `false`.
-* `$wgWimaGoogleAdSense = true;`
+* `$wmGoogleAdSense = true;`
 
 Disable advertising for logged-in users. Default is `false`.
-* `$wgWimaGoogleAdSenseAnonOnly = true;`
+* `$wmGoogleAdSenseAnonOnly = true;`
 
 ### Mandatory parameters
 Replace this with your own publisher ID (google_ad_client / data-ad-client)
-* `$wgWimaGoogleAdSenseClient = 'none';` // Client ID for your AdSense script (example: ca-pub-1234546403419693)
+* `$wmGoogleAdSenseClient = 'none';` // Client ID for your AdSense script (example: ca-pub-1234546403419693)
 (You can get your publisher ID and ad unit ID from the "Get code" page: Get and copy the ad code.)
 
 ### Ad units
 Define up to four ad units:
-* `$wgWimaGoogleAdSense_Top    = [ 'slotid 1', 145, 260 ];`
-* `$wgWimaGoogleAdSense_Left   = [ 'slotid 2', 145, 260 ];`
-* `$wgWimaGoogleAdSense_Right  = [ 'slotid 3', 145, 260 ];`
-* `$wgWimaGoogleAdSense_Bottom = [ 'slotid 4', 145, 260 ];`
+* `$wmGoogleAdSense_Top    = [ 'slotid 1', 145, 260 ];`
+* `$wmGoogleAdSense_Left   = [ 'slotid 2', 145, 260 ];`
+* `$wmGoogleAdSense_Right  = [ 'slotid 3', 145, 260 ];`
+* `$wmGoogleAdSense_Bottom = [ 'slotid 4', 145, 260 ];`
 
 Replace the first value with your AdSense ad unit ID (google_ad_slot / data-ad-slot) for each ad unit. The Slot ID for your AdSense script is for example `1234580893`.
 
@@ -91,16 +91,16 @@ Also specify the width and the height of the AdSense unit, specified in your AdS
 Add any of the optional settings below – if your settings deviate from the defaults:
 
 This can be anything you like. Default is `none`.
-* `$wgWimaGoogleAdSenseID = 'none';`
+* `$wmGoogleAdSenseID = 'none';`
 
 Source URL of the AdSense script. No need to change – it can't deviate from the defaults.
-* `$wgWimaGoogleAdSenseSrc = '//pagead2.googlesyndication.com/pagead/show_ads.js';`
+* `$wmGoogleAdSenseSrc = '//pagead2.googlesyndication.com/pagead/show_ads.js';`
 
 Text coding. Default is `utf8`.
-* `$wgWimaGoogleAdSenseEncoding = 'utf8';`
+* `$wmGoogleAdSenseEncoding = 'utf8';`
 
-Advertising language. Default is `$wgLanguageCode`.
-* `$wgWimaGoogleAdSenseLanguage = 'en';`
+Advertising language. Default is `$wmLanguageCode`.
+* `$wmGoogleAdSenseLanguage = 'en';`
 
 ## Compatibility
 This extension works from REL1_25 and has been tested up to MediaWiki version `1.40.1`.
@@ -140,3 +140,7 @@ This extension works from REL1_25 and has been tested up to MediaWiki version `1
 
 - New version with fixed position advertising boxes.
 - At the moment only tested with MediaWiki version `1.39.1` and Skin `vector-2022`.
+
+3.1.0
+
+- Changed the prefix of the configuration variables from default to `wm`.

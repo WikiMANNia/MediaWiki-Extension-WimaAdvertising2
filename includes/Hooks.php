@@ -1,4 +1,10 @@
 <?php
+**
+ * Hooks for WimaAdvertising extension
+ *
+ * @file
+ * @ingroup Extensions
+ */
 
 class WimaAdvertisingHooks extends Hooks {
 

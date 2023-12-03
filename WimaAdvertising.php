@@ -47,7 +47,7 @@ call_user_func(
 		if ( function_exists( 'wfLoadExtension' ) ) {
 			wfLoadExtension( 'WimaAdvertising' );
 			// Keep i18n globals so mergeMessageFileList.php doesn't break
-			$wgMessagesDirs['WimaAdvertising'] = "$dtgIP/i18n";
+			$wmMessagesDirs['WimaAdvertising'] = "$dtgIP/i18n";
 			wfWarn(
 			   'Deprecated PHP entry point used for WimaAdvertising extension. ' .
 			   'Please use wfLoadExtension instead, ' .
@@ -59,16 +59,16 @@ call_user_func(
 	}
 );
 
-$wgExtensionCredits['specialpage'][] = array(
+$wmExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'WimaAdvertising',
-	'version'        => '3.0.0a',
+	'version'        => '3.1.0a',
 	'author'         => 'WikiMANNia',
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:WimaAdvertising',
 	'descriptionmsg' => 'wimaadvertising-desc',
 );
 
-$wgResourceModules['ext.wimaadvertising.common'] = array(
+$wmResourceModules['ext.wimaadvertising.common'] = array(
 	'styles' => 'resources/css/Common.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -76,7 +76,7 @@ $wgResourceModules['ext.wimaadvertising.common'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.cologneblue'] = array(
+$wmResourceModules['ext.wimaadvertising.cologneblue'] = array(
 	'styles' => 'resources/css/Cologneblue.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -84,7 +84,7 @@ $wgResourceModules['ext.wimaadvertising.cologneblue'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.mobile'] = array(
+$wmResourceModules['ext.wimaadvertising.mobile'] = array(
 	'styles' => 'resources/css/Mobile.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -92,7 +92,7 @@ $wgResourceModules['ext.wimaadvertising.mobile'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.minerva'] = array(
+$wmResourceModules['ext.wimaadvertising.minerva'] = array(
 	'styles' => 'resources/css/Minerva.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -100,7 +100,7 @@ $wgResourceModules['ext.wimaadvertising.minerva'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.modern'] = array(
+$wmResourceModules['ext.wimaadvertising.modern'] = array(
 	'styles' => 'resources/css/Modern.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -108,7 +108,7 @@ $wgResourceModules['ext.wimaadvertising.modern'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.monobook'] = array(
+$wmResourceModules['ext.wimaadvertising.monobook'] = array(
 	'styles' => 'resources/css/Monobook.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -116,7 +116,7 @@ $wgResourceModules['ext.wimaadvertising.monobook'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.timeless'] = array(
+$wmResourceModules['ext.wimaadvertising.timeless'] = array(
 	'styles' => 'resources/css/Timeless.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -124,7 +124,7 @@ $wgResourceModules['ext.wimaadvertising.timeless'] = array(
 		'jquery.makeCollapsible',
 	),
 );
-$wgResourceModules['ext.wimaadvertising.vector'] = array(
+$wmResourceModules['ext.wimaadvertising.vector'] = array(
 	'styles' => 'resources/css/Vector.css',
 	'localBasePath' => dirname( __FILE__ ),
 	'remoteExtPath' => 'WimaAdvertising',
@@ -134,49 +134,49 @@ $wgResourceModules['ext.wimaadvertising.vector'] = array(
 );
 
 // register all special pages and other classes
-$wgMessagesDirs['WimaAdvertising'] = "$dtgIP/i18n";
-$wgExtensionMessagesFiles['WimaAdvertisingAliases'] = $dir . 'WimaAdvertising.alias.php';
-$wgAutoloadClasses['CustomAdvertisingSettings'] = "$dtgIP/includes/CustomAdvertisingSettings.php";
-$wgAutoloadClasses['GoogleAdvertisingSettings'] = "$dtgIP/includes/GoogleAdvertisingSettings.php";
-$wgAutoloadClasses['WimaAdvertisingHooks'] = "$dtgIP/includes/specials/HooksWimaAdvertising.php";
-$wgHooks['BeforePageDisplay'][] = 'WimaAdvertisingHooks::onBeforePageDisplay';
+$wmMessagesDirs['WimaAdvertising'] = "$dtgIP/i18n";
+$wmExtensionMessagesFiles['WimaAdvertisingAliases'] = $dir . 'WimaAdvertising.alias.php';
+$wmAutoloadClasses['CustomAdvertisingSettings'] = "$dtgIP/includes/CustomAdvertisingSettings.php";
+$wmAutoloadClasses['GoogleAdvertisingSettings'] = "$dtgIP/includes/GoogleAdvertisingSettings.php";
+$wmAutoloadClasses['WimaAdvertisingHooks'] = "$dtgIP/includes/includes/Hooks.php";
+$wmHooks['BeforePageDisplay'][] = 'WimaAdvertisingHooks::onBeforePageDisplay';
 
 ###
 # This is the path to your installation of the Data Transfer extension as
-# seen from the web. Change it if required ($wgScriptPath is the
+# seen from the web. Change it if required ($wmScriptPath is the
 # path to the base directory of your wiki). No final slash.
 ##
-$dtgScriptPath = $wgScriptPath . '/extensions/WimaAdvertising';
+$dtgScriptPath = $wmScriptPath . '/extensions/WimaAdvertising';
 ##
 
 // Global settings
-$wgAdTopCode = "";
-$wgAdTopType = "advertising";
-$wgAdLeftCode = "";
-$wgAdLeftType = "advertising";
-$wgAdRightCode = "";
-$wgAdRightType = "advertising";
-$wgAdBottomCode = "";
-$wgAdBottomType = "advertising";
-$wgWimaAdvertisingAnonOnly = false;
-$wgWimaGoogleAdSenseClient = "none";
-$wgWimaGoogleAdSenseSlot = "none";
-$wgWimaGoogleAdSenseSrc = "//pagead2.googlesyndication.com/pagead/show_ads.js";
-$wgWimaGoogleAdSenseID = "none";
-$wgWimaGoogleAdSenseAnonOnly = false;
+$wmAdTopCode = "";
+$wmAdTopType = "advertising";
+$wmAdLeftCode = "";
+$wmAdLeftType = "advertising";
+$wmAdRightCode = "";
+$wmAdRightType = "advertising";
+$wmAdBottomCode = "";
+$wmAdBottomType = "advertising";
+$wmWimaAdvertisingAnonOnly = false;
+$wmGoogleAdSenseClient = "none";
+$wmGoogleAdSenseSlot = "none";
+$wmGoogleAdSenseSrc = "//pagead2.googlesyndication.com/pagead/show_ads.js";
+$wmGoogleAdSenseID = "none";
+$wmGoogleAdSenseAnonOnly = false;
 ###
 
 
-$wgExtensionFunctions[] = 'setupWimaAdvertisingExtension';
+$wmExtensionFunctions[] = 'setupWimaAdvertisingExtension';
 
 function setupWimaAdvertisingExtension() {
-	global $wgDisableWimaAdvertising, $wgVersion;
+	global $wmDisableWimaAdvertising, $wmVersion;
 
-	if ( version_compare( $wgVersion, '1.23', '<' ) ) {
+	if ( version_compare( $wmVersion, '1.23', '<' ) ) {
 		die( 'This extension requires MediaWiki 1.23+' );
 	}
-	elseif ( $wgDisableWimaAdvertising === false ) {
-		global $wgAvailableRights, $wgGroupPermissions, $wgLogTypes, $wgLogActionsHandlers;
+	elseif ( $wmDisableWimaAdvertising === false ) {
+		global $wmAvailableRights, $wmGroupPermissions, $wmLogTypes, $wmLogActionsHandlers;
 	}
 
 	return true;

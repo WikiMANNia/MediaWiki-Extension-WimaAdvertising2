@@ -3,10 +3,11 @@
 	"author": "[//wikimannia.org WikiMANNia]",
 	"url": "https://www.mediawiki.org/wiki/Extension:WimaAdvertising",
 	"license-name": "GPL-2.0-or-later",
-	"version": "3.0.0a",
+	"version": "3.1.0a",
 	"namemsg": "wimaadvertising-msg",
 	"descriptionmsg": "wimaadvertising-desc",
 	"config": {
+		"_prefix": "wm",
 		"AdTopCode": "",
 		"AdTopType": "advertising",
 		"AdLeftCode": "",
@@ -17,18 +18,18 @@
 		"AdBottomType": "advertising",
 		"WimaAdvertisingScript": "",
 		"WimaAdvertisingAnonOnly": false,
-		"WimaGoogleAdSenseClient": "none",
-		"WimaGoogleAdSenseSlot": "none",
-		"WimaGoogleAdSenseSrc": "//pagead2.googlesyndication.com/pagead/show_ads.js",
-		"WimaGoogleAdSenseID": "none",
-		"WimaGoogleAdSenseAnonOnly": false
+		"GoogleAdSenseClient": "none",
+		"GoogleAdSenseSlot": "none",
+		"GoogleAdSenseSrc": "//pagead2.googlesyndication.com/pagead/show_ads.js",
+		"GoogleAdSenseID": "none",
+		"GoogleAdSenseAnonOnly": false
 	},
 	"manifest_version": 1,
 	"type": "other",
 	"AutoloadClasses": {
 		"CustomAdvertisingSettings": "includes/CustomAdvertisingSettings.php",
 		"GoogleAdvertisingSettings": "includes/GoogleAdvertisingSettings.php",
-		"WimaAdvertisingHooks": "includes/specials/HooksWimaAdvertising.php"
+		"WimaAdvertisingHooks": "includes/Hooks.php"
 	},
 	"Hooks": {
 	    "BeforePageDisplay": "WimaAdvertisingHooks::onBeforePageDisplay"
